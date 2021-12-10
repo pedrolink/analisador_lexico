@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Analisador Léxico</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="assets/css/vendor.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/flat-admin.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/theme/blue-sky.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/theme/blue.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/theme/red.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/theme/yellow.css">
+</head>
+
+<body>
+
+  <div class="app-container">
+    <div class="row">
+      <div align="center">
+        <h2>Analisador Léxico</h2>
+      </div>
+    </div>
+    <div class="row" style="margin-top: 20px">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            Elementos Básicos
+          </div>
+          <div class="card-body body-wrapper">
+            <div class="col-md-6">
+              <div class="cleafix">
+                <div class="col-sm-9 padding-zero">
+                  <div class="input-group">
+                    <input id="input-insere" onkeyup="removeCaracteres();" type="text" class="form-control"
+                      placeholder="Inserir Palavra" aria-describedby="basic-addon1" value="">
+                  </div>
+                </div>
+                <div class="col-sm-3 padding-zero align-center">
+                  <button type="button" class="btn btn-primary" onclick="inserePalavra();">Inserir</button>
+                </div>
+              </div>
+              <table class="table card-table" style="width: 95%;">
+                <thead>
+                  <tr>
+                    <th>Palavra</th>
+                    <th width="40">X</th>
+                  </tr>
+                </thead>
+                <tbody id="table-palavras">
+                </tbody>
+              </table>
+            </div>
+            <div class="col-md-6">
+              <div class="cleafix">
+                <div class="col-sm-9 padding-zero">
+                  <div id="box" class="input-group">
+                    <input type="text" id="buscar" class="form-control" placeholder="Buscar Palavra"
+                      aria-describedby="basic-addon1" value="">
+                  </div>
+                </div>
+                <div class="col-sm-3 padding-zero align-center">
+                  <button type="button" onclick="clearSearch();" class="btn btn-primary">Limpar</button>
+                </div>
+              </div>
+              <table class="table card-table" style="width: 95.5%;">
+                <thead>
+                  <tr>
+                    <th>Palavra</th>
+                    <th width="40">Estado</th>
+                  </tr>
+                </thead>
+                <tbody id="table-search">
+                </tbody>
+              </table>
+            </div>
+
+            <div class="clearfix"></div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header">
+            Tabela de Estados
+          </div>
+          <div class="card-body">
+            <table id="automato" class="table table-striped table-bordered table-hover"></table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <script type="text/javascript" src="assets/js/vendor.js"></script>
+  <script type="text/javascript" src="assets/js/app.js"></script>
+  <script type="text/javascript" src="assets/js/scripts.js"></script>
+</body>
+
+</html>
